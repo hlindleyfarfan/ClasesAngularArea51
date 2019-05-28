@@ -1,0 +1,4 @@
+<app-login *ngIf="mostrar==1" (onLogin)="mostrar=2"></app-login>
+<app-listado *ngIf="mostrar==2" (onNuevo)="mostrar=$event" (onEditar)="capturar($event)"></app-listado>
+<app-agregar *ngIf="mostrar==3" (onFinalizar)="mostrar=$event"></app-agregar>
+<app-modificar *ngIf="mostrar==4" (onModificar)="mostrar=$event" [receta]="receta" ></app-modificar>
