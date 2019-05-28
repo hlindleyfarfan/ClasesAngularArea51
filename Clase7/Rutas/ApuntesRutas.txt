@@ -1,0 +1,98 @@
+21/5/19
+
+correo del profe: sergiohidalgocaceres@gmail.com
+
+RUTAS
+
+Librería: @Angular/Router
+
+ForRogt.- crear RUTAS
+
+En el index.html se señala la ruta por defecto: <app-root>
+Los nuevos componentes se importan automaticamente en app.module: import ...
+
+RouterModule en app.module:
+          import { RouterModule } from "@angular/router"
+        imports: [
+          RouterModule
+        ],
+
+
+        const rutas: Routes = [
+        { path: "", component: UsuarioComponent },
+        { path: "clientes", component: ClienteComponent }
+      ]
+
+      Browser:
+      http://localhost:4200/     -> componente Usuario
+      http://localhost:4200/clientes   -> componente Cliente
+
+
+      si escribimos una ruta q no existe se puede agregar un componenete "noEncontrado" y se le configura:   { path: "**", component: NoEncontradoComponent }
+      ** significa cualquier ruta
+
+      El orden de las rutas es importante:
+      const rutas: Routes = [
+        { path: "", component: UsuarioComponent },
+        { path: "clientes", component: ClienteComponent },
+        { path: "**", component: NoEncontradoComponent }
+      ]
+
+      Si ponemos   
+        { path: "**", redirectTo: "" } en vez de { path: "**", component: NoEncontradoComponent } irá a UsuarioComponent 
+
+En app.component: 
+        interpolamos.-
+        {{fecha}}, luego de haber creado propiedad en el ts
+
+        Menú con href: refrescar la pagina
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Usuario</a>
+                </li>
+                <li>
+                    <a href="/clientes">Clientes</a>
+                </li>
+            </ul>
+        </nav>
+        
+        Menú con routerLink: no refrescar la pagina (recomendado)
+
+        <nav>
+            <ul>
+                <li>
+                    <a routerLink="/">Usuario</a>
+                </li>
+                <li>
+                    <a routerLink="/clientes">Clientes</a>
+                </li>
+            </ul>
+        </nav>        
+
+Ruta con parámetros en app.module
+       path: "edicion/:id", component: EdicionComponent },   //si lo corremos y se da clik al menú edición, manda a usuario por ser error, para evitarlo hay q ponerle por ejemplo en el html:
+        <a routerLink="/edicion/20">Edición</a>
+
+En edicion.component.ts
+      constructor(private rutaActiva: ActivatedRoute) { }
+
+      ngOnInit() {
+      this._id = this.rutaActiva.snapshot.params.id        //el params contiene el "id" q se puso en la ruta
+      }
+
+      El ciclo es: 1. El constructor: sólo una vez
+                   
+                   2. ngOnInit: sólo una vez
+
+                   x. El html
+
+
+      Al agregar: ...
+      this.rutaActiva.paramMap.subscribe(
+      (parametros: Params) => {
+        this._id = parametros.params.id
+      }
+    )
+      ... nos aseguramos que se actualice el id, de modo que ya no es necesario this._id = this.rutaActiva.snapshot.params.id 
+    
