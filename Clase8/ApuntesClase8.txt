@@ -1,0 +1,15 @@
+GUARDS -> Clases -> Servicio
+
+canActivate.- protege q el usuario entre a una ruta
+canActivateChildren
+
+canDeactivate.- protege q el usuario salga de una ruta
+canLoad
+
+ng g g autorization .- para crear el guard autorization
+    este es el q se debe usar
+    canActivate o canActivateChildren
+    en el .guard està la función que devuelve true o false, luego este debe devolver una propiedad booleana que reemplace al true o false inicial en duro
+    dicha propiedad debe cargarse desde el botón de aceptar el logeo por ejemplo.
+
+
