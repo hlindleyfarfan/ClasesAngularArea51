@@ -1,0 +1,8 @@
+<p>
+  
+
+<app-receta *ngFor="let receta of recetas; let indice = index"
+[indice]=indice
+[receta]="receta"
+(onSalida)="eliminarReceta($event)"></app-receta>
+</p>
