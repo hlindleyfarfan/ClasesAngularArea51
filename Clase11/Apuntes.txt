@@ -1,0 +1,31 @@
+HttpClientModule
+    (ya no HttpModule) 
+    Tiene su servicio: HttpClient
+
+    Servicio alumno
+        /alumno
+            / Get (listar)
+            / Post (insertar)
+            / Put (actualizar)
+            / Delete (eliminar)
+            / Get (listar uno)
+
+        
+        http://clase.tibajodemanda.com/alumno  .- llamada asincrona porq no podemos determinar el tiempo de respuesta
+
+        Observables.-
+            -Muchas veces
+            -No es automática
+
+        Promesas.-
+            -1 vez
+            -automáticas
+
+        Observable.- están dentro del método Get
+        Observador.- están dentro del método Get
+
+        Suscripción
+        Suscriptor
+
+
+          ngOnInit() se ejecuta despues del constructor
