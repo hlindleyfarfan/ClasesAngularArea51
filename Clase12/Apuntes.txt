@@ -1,0 +1,35 @@
+INTERCEPTORES
+    Intertcepta la petición del API Rest que hace el servicio, realmente la clona, luego el sigue su camino original
+    El intercepor también se subscribe, asi como el http
+
+    Subscribe:
+        -Data
+        -Errores
+        -Completado
+
+    Bastó con crear el interceptor app.interceptor.ts con multi: true y toda petición de http pasará por el interceptor; si está en multi: false sólo agarrará el final
+
+
+    appModulos
+        Debe reemplazar al app.Module por defecto
+
+        Los sgtes listados no deben cargarse al inicio:
+
+        Usuarios
+        Clientes
+        Transportistas
+
+        ng g m <nombre modulo>
+        ng g m nucleo
+
+        Sólo deseo cargar:
+        Login
+        Registro
+        Home
+
+        ng g c nucleo/login
+        ng g c nucleo/home
+        ng g c nucleo/registro
+
+
+        loadChildren.- carga modulo bajo demanda
