@@ -1,0 +1,9 @@
+<ul *ngIf="usuarioLogueado">
+  <li>
+    <a routerLink="/receta">Receta</a>
+  </li>
+  <li>
+    <a routerLink="/ingrediente">Ingrediente</a>
+  </li>
+</ul>
+<button (click)="logout()" *ngIf="usuarioLogueado">Logout</button>
