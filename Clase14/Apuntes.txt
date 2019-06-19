@@ -1,0 +1,25 @@
+CanDeactivate
+    Salir de la ruta
+    ng g g SalirRuta    
+
+ng g interface canDeactivateFuncion
+    canDeactivateFuncion.interface.ts
+
+Promise
+	Funciona una vez
+    Para funcionar no es necesario que se lo pidan
+
+
+PIPES
+    fecha = new Date
+
+    Fecha de hoy {{fecha}}
+    Fecha de hoy {{fecha | date}}
+    Fecha de hoy {{fecha | date | uppercase}}
+
+    ng g p filtrar
+
+TAREA
+Deactivate: En los Modificar mensaje si se ha hecho un cambio y no se ha grabado
+Resolve:que no muestre nada si no ha cargado para Ingredientes
+Pipe:Que se vea la descripcion en letra chiquita bajo el titulo de Receta, que tenga reduccion por palabras
