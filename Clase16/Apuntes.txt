@@ -1,0 +1,51 @@
+ng g c homes
+ng g c clientes
+ng g c transportistas
+
+https://material.angular.io/
+
+mat-raised-button
+mat-flat-button
+mat-raised-button
+mat-raised-button
+mat-raised-button
+
+@angular/flex-layout.- se debe instalar: npm i --save @angular/flex-layout
+		en app.modules import { FlexLayoutModule } from "@angular/flex-layout" y en imports
+flexbox
+
+flex-direction:row .- por defecto, de izquierda a derecha
+flex-direction:column .- invierte los ejes en el grid
+justify-content: flex-start.- alineación
+justify-content: center
+justify-content: space-around
+justify-content: space-between.- manda ambos elementos (1ero y ultimo) y los pone a los extremos
+
+flex-grow: 1
+flex-shrink: 1
+flex-basis: 100
+flex: 1 1 100px
+
+<div class="contenedor" fxLayout fxLayoutAlign>
+	<mat-card class="mat-elevation-z8">
+
+	<mat-card-content>
+
+	lt: less than
+	gt: más que
+
+	<ul fxHide.lt-sm> .-ocultar cuando el valor sea menos q sm
+	
+
+
+	appCiclosVida
+		1.-Constructor.- antes de entrar a la pagina
+		2.-ngOnChanges.- cambios en las entradas. Ej: <app-item indice="30"></app-item> en el html
+		3.-ngOnInit
+		
+		4.-ngDoCheck
+		5.-ngAfterViewInit
+		6.-ngAfterViewChecked
+		7.-ngAfterContentInit
+		8.-ngAfterContentChecked
+		9.-ngOnDestroy
