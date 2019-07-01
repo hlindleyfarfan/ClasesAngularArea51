@@ -1,0 +1,23 @@
+npm init -y.- crea el package.json
+
+npm i --save-dev @types/node.- instala el @types/node, el dev hace q no se instale cuando se pase a producccion
+
+
+ts-node stream .- ejecutando el archivo stream.ts
+
+import http = require("http").- levantando servidor web
+
+Node Request
+Node Response
+
+
+carpeta esqueleto
+    npm i --save express @types/express
+    npm i --save-dev @types/node
+
+    Nodemon.-
+        Crear el nodemon.json
+        npm i -g nodemon
+
+    Postman de chrome Mas Herramientas_Extensiones, si no se tiene bajarlo en google 
+    Se cambió a app.get("/usuarios/nuevo", (req, res)=>{ ...  temporalmente
