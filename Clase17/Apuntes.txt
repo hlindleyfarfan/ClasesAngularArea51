@@ -1,0 +1,49 @@
+ngDoCheck().- siempre se ejecuta en cada acciónq se haga
+
+Cuando se pone changeDetection:ChangeDetectionStrategy.OnPush en itemComponent sólo se ejecuta el ngDoCheck en los componentes contenidos (app-Dato)
+
+El ngOnChanges detecta cambios en los datos almacenados en memoria o el tipo de dato, pero no se ejecutaría si se cambia el nombre de la variable o propiedad
+
+DESPLIEGUE
+
+Se complica y se pasa a javascript
+Para esto se ejecuta: ng build
+    Esto crea una carpeta "dist" con la carpeta con el nombre del proyecto la cual tiene los archivos que se necesitan pasar
+    El archivo más importante es vendor
+corriendo ng build --prod, se cambiaran los nombres de los archivos js cada vez q se corra, de modo que el cliente no irá a sus temporales y tendrá lo último. El --prod hace q se busque 
+la configuración del angular.json
+     "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+
+ng build --prod es la abreviacion de ng build --configuration=production; esta abreviación sólo existe para producción
+Ej: ng build --configuration=qa;
+
+En index.html se debe cambiar <base href="/"  por <base href="/appCicloVida/" para que se busquen los archivos js en la carpeta del proyecto
+
+En environment.ts o environment.prod.ts 
+
+Ver archivo polyfills
+
+
+NODE
+
+mensaje.js
+ejecutar: node mensaje, donde mensaje es un .js
+Para correr ts en node hay q instalar ts-node
+se instala con: npm i -g ts-node typescript
+Luego ts-node msg, donde msg es un .ts
+
+En definiciones como import fs = require("fs"), se debe antes...
+    npm init que crea package.json o npm init -y que crea package.json sin preguntar nada
+
+    npm i --save-dev @types/node, esto sólo se corre en ambiente de desarrollo
+    crear archivo tsconfig.json y se llena a mano
+
+
+Método Stream.- partir un archivo pesado en pedasos pequeños para poder transportarse.
