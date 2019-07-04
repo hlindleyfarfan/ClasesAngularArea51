@@ -1,0 +1,33 @@
+
+POSTMAN
+
+    GET
+
+    POST
+
+    PUT / PATCH .- actualizar
+
+    DELETE
+
+
+nodemon.- para ejecutar
+en postman crear colecciones Usuario
+
+
+npm i body-parser --save.- ejecutar en la carpeta esqueleto para instalar el body-parser
+
+
+ROUTES
+    Usuarios.Route.ts
+CONTROLLERS
+    Usuarios.Controller.ts
+    Promesa
+        Then
+        Catch
+
+TAREA
+    Crear Recetas.json(Titulo, Descripcion)  con .controller, .route
+    
+
+
+
