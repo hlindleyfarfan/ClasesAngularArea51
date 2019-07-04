@@ -1,0 +1,15 @@
+<input type="text" (input)="this.textoCapturado=$event.target.value">
+<br>
+{{textoCapturado}}
+<br>
+<button (click)="mostrar()">Clic para mostrar mensaje</button>
+
+<button (click)="this.ocultar=!this.ocultar">Mostrar/Ocultar</button>
+
+<div *ngIf="!this.ocultar">
+  Usuario: admin
+</div>
+
+<!-- .addEventListener("input", function(e){
+  console.log(e.target.value)
+}) -->

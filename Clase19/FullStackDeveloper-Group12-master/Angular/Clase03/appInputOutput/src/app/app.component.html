@@ -1,0 +1,15 @@
+<app-entrada-salida></app-entrada-salida>
+
+<input type="text" disabled>
+
+<app-usuario *ngFor="let usuario of usuarios; let indice = index" [indice]="indice" [user]="usuario"
+  (onSalida)="eliminarUsuario($event)"></app-usuario>
+
+
+<!-- <ul>
+  <li *ngFor="let usuario of usuarios">
+    {{usuario.username}}
+    <br>
+    {{usuario.area}}
+  </li>
+</ul> -->
