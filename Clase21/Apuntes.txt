@@ -1,0 +1,56 @@
+Cadena de conexion
+    mongodb+srv://hectorlindley:<password>@cluster0-aficf.mongodb.net/test?retryWrites=true&w=majority
+Nombre de la bd: test 
+mongodb+srv://hectorlindley:Schwarze6212$@cluster0-aficf.mongodb.net/midbprueba?retryWrites=true&w=majority
+
+
+Mongoose.- Paquete q se debe instalar en la ruta Clase21 dentro de carpeta Node
+    Es dependencia del proyecto por ende --Save
+
+    npm i --save mongoose 
+    npm i --save--dev @types/mongoose
+
+
+server.ts
+    import mongoose = require("mongoose")
+    mongoose.Promise = global.Promise
+    mongoose.connect("mongodb+srv://hectorlindley:Schwarze6212$@cluster0-aficf.mongodb.net/midbprueba?retryWrites=true&w=majority",
+    {useNewUrlParser: true})
+    mongoose.connection.on("connected", ()=>console.log("Conectado a Mongo"))
+    mongoose.connection.on("error", error => console.log("Error", error))
+
+
+Tablas -> Colecciones
+Registro -> Document
+Json -> {id:'abc', nombre='hectorlindley'}
+Bson -> binario
+
+
+Esquema.- Descripcion
+    Modelo.- Valida
+
+
+
+find().- similar al Select
+
+await Usuario.findOneAndUpdate({username: req.body.username}, {_id})   //esta línea resume las 3 anteriores
+    .- lo q está entre paréntesis es el Where
+
+
+
+En el Postman
+    listar GET http://localhost:3000/usuarios
+    insertar POST http://localhost:3000/usuarios
+        key: username value: hector
+    actualizar PUT http://localhost:3000/usuarios/5d25475b1ea57e0afafeb124
+    {
+	"username": "hectorlindley"
+    }
+    eliminar delete http://localhost:3000/usuarios/5d25475b1ea57e0afafeb124
+
+
+
+Tarea
+    Adaptar el proyecto proyectoAngular para que acceda a la bd mongo
+
+    
