@@ -1,0 +1,34 @@
+AUTENTICACIÓN
+    Si token es válido pasa a ruta xxxxxxx
+    Si no es rechazado y no pasa a las rutas (error 409)
+
+AUTORIZACIÓN
+    Hay rutas q basta con ser autenticado pero otras necesitan pasar por el midleword de AUTORIZACIÓN
+    A travez de Roles
+
+
+    API REST: LISTAR  INSERTAR    ELIMINAR
+    _______________________________________
+
+    ADMIN       x       x           x
+
+    OPERADOR
+    _______________________________________
+
+
+    VARIABLES DE ENTORNO
+        npm i DOTENV --SAVE
+        process.env
+
+https://expressjs.com/es/
+
+
+sergio.delrio@hundred.com.pe
+Manejo de BD - Capacidad Analitica
+
+
+clave de admin: pearson
+
+CORS.- CROSS ORIGIN RESOURCE SHARED
+
+import cors = require("cors")
