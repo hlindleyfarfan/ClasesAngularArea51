@@ -1,0 +1,19 @@
+
+en la carpeta base: git init
+
+
+Angular
+git remote add origin https://github.com/hlindleyfarfan/ClasesAngularArea51.git
+git push -u origin master  ???
+
+En cada carpeta
+git add .
+git commit -m "first commit"
+git push -u origin master
+
+
+
+
+
+Unity
+git remote add origin https://github.com/hlindleyfarfan/ProyectosUnity.git
