@@ -1,5 +1,10 @@
 
 en la carpeta base: git init
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/hlindleyfarfan/ExamenBamTang.git
+git push -u origin master
 
 
 Angular
@@ -17,3 +22,7 @@ git push -u origin master
 
 Unity
 git remote add origin https://github.com/hlindleyfarfan/ProyectosUnity.git
+
+
+BamTang
+git remote add https://github.com/hlindleyfarfan/ExamenBamTang.git
